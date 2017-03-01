@@ -1,4 +1,26 @@
-const db = require('./db')
-const Activity = require('./Activity');
-const Hotel = require('./Hotel');
-const Place = require('./Place');
+const tripDB = require( './db' )
+const Associations = require( './Associations' );
+const Restaurant = require( './Restaurant' );
+const Activity = require( './Activity' );
+const Hotel = require( './Hotel' );
+const Place = require( './Place' );
+
+const sync = () => {
+    return tripDB.sync({ force: true });
+};
+
+const seed = () => {
+    return sync()
+};
+
+module.exports = {
+    models: {
+        Activity,
+        Associations,
+        Hotel,
+        Place,
+        Restaurant
+    },
+    seed,
+    sync
+};
