@@ -9,7 +9,6 @@ const swig = require( 'swig' );
 const models = tripDB.models;
 //..............................................
 // don't need these yet...uncomment as needed...
-// const Associations = models.Associations;
 // const Restaurant = models.Restaurant;
 // const Activity = models.Activity;
 // const Hotel = models.Hotel;

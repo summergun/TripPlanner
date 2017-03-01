@@ -1,13 +1,10 @@
 const tripDB = require( './db' )
-const Associations = require( './Associations' );
 const Restaurant = require( './Restaurant' );
 const Activity = require( './Activity' );
 const Hotel = require( './Hotel' );
 const Place = require( './Place' );
 
-//..............................................
-//....need to setup table relationships........
-//..............................................
+
 
 const sync = () => {
     return tripDB.sync({ force: true });
