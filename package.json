@@ -1,14 +1,14 @@
 {
-  "name": "Tripplanner",
+  "name": "TripPlanner",
   "version": "1.0.0",
-  "description": "",
+  "description": "TripPlanner workshop",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev":"DATABASE_URL=postgress://localhost/tripplanner nodemon"
+    "start:dev":"nodemon"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mitch, Summer & Vince as a team",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.16.1",
