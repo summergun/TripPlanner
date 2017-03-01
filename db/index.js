@@ -17,7 +17,6 @@ const seed = () => {
 module.exports = {
     models: {
         Activity,
-        Associations,
         Hotel,
         Place,
         Restaurant
