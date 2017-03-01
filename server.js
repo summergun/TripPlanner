@@ -16,6 +16,10 @@ server.use(methodOverride( '_method' ))
 server.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
 server.use('/css', express.static(path.join(__dirname, './css')));
 
+server.get('/', (req, res, next) => {
+    res.render('index')
+});
+
 tripDB.seed()
     .then(() => console.log('your data is seeded'))
     .catch( err => console.log(err));
