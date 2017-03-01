@@ -1,8 +1,7 @@
-const acmeDB = require( './db' );
+const tripDB = require( './db' );
 
-const Associations = acmeDB.define('associations', {
+const Associations = tripDB.define('associations', {
 
 });
 
 module.exports = Associations;
-
