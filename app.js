@@ -7,6 +7,7 @@ const path = require( 'path' );
 const swig = require( 'swig' );
 
 const models = tripDB.models;
+const router = require('./routes');
 //..............................................
 // don't need these yet ..uncomment as needed..
 // const Restaurant = models.Restaurant;
@@ -28,8 +29,10 @@ app.use('/css', express.static(path.join(__dirname, './css')));
 //........need to setup specific routes.........
 //..............................................
 
-app.get('/', (req, res, next) => {
-    res.render('index')
-});
+// app.get('/', (req, res, next) => {
+//     res.render('index')
+// });
+
+app.use('/', router);
 
 module.exports = app;
