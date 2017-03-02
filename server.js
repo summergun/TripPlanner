@@ -1,16 +1,11 @@
-const express = require ('express');
-const swig = require ('swig');
+const server = require( 'http' ).createServer(require( './app' ));
+const tripDB = require( './db' );
 
-const path = require('path');
+tripDB.seed()
+    .then(() => console.log('your data is seeded'))
+    .catch( err => console.log(err));
 
-const bodyparser= require('body-parser');
+console.log('Models: ', tripDB.models);
 
 const port = process.env.PORT || 3000;
-swig.setDefaults({cache:false});
-
-const app = express();
-
-app.set('view engine','html');
-app.engine("html",swig.renderFile);
-
-app.listen(port,()=>console.log(`I am listening on ${port}`));
+server.listen(port, () => console.log(`listening on port ${port}`));
