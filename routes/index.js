@@ -18,11 +18,11 @@ router.get('/', (req, res, next) => {
             findActivities,
             findRestaurants
         ])
-        .then(function([hotels, activities, restuarants]) {
+        .then(function([hotels, activities, restaurants]) {
             res.render('index', {
                 hotels,
                 activities,
-                restuarants,
+                restaurants,
                 title: 'testing123'
             });
         })
@@ -45,13 +45,12 @@ router.get('/data.js', function(req, res, next) {
             findActivities,
             findRestaurants
         ])
-        .then(function([hotels, activities, restuarants]) {
+        .then(function([hotels, activities, restaurants]) {
             res.set('Content-Type', 'application/javascript');
-            console.log(hotels.length, activities.length, restuarants.length);
             res.render('script', {
                 hotels,
                 activities,
-                restuarants
+                restaurants
             });
         })
         .catch(next);
