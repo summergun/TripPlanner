@@ -5,9 +5,9 @@ const Hotel = require('./Hotel');
 const Place = require('./Place');
 
 //make sure all tables have place refrence
-// Hotel.belongsTo(Place);
-// Restaurant.belongsTo(Place);
-// Activity.belongsTo(Place);
+Hotel.belongsTo(Place);
+Restaurant.belongsTo(Place);
+Activity.belongsTo(Place);
 
 const sync = () => {
     return tripDB.sync({ force: true });

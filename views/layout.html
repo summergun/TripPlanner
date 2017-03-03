@@ -1,12 +1,16 @@
 <html>
-    <head>
-        <title>{{ title }}</title>
-        <link href='/vendor/bootstrap/dist/css/bootstrap.css' rel='stylesheet'>
-        <link href='/css/main.css' rel='stylesheet'>
-    </head>
-    <body>
-        <div class='container'>
-            {% block content %}{% endblock %}
-        </div>
-    </body>
+
+<head>
+    <title>{{ title }}</title>
+    <link href='/vendor/bootstrap/dist/css/bootstrap.css' rel='stylesheet' />
+    <link href='/css/main.css' rel='stylesheet' />
+    <script src="/data.js"></script>
+</head>
+
+<body>
+    <div class='container'>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
 </html>
