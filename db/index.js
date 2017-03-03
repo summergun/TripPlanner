@@ -43,10 +43,10 @@ const seed = () => {
                 Activity.create({ name: 'place hopping', age_range: 'over 18', placeId: 4 })
             ];
         })
-        .then(() => Promise.all(places));
-    // .then(() => Promise.all(hotels))
-    // .then(() => Promise.all(restaurants))
-    // .then(() => Promise.all(activity));
+        .then(() => Promise.all(places))
+        .then(() => Promise.all(hotels))
+        .then(() => Promise.all(restaurants))
+        .then(() => Promise.all(activity));
 };
 
 module.exports = {
